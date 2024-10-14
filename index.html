@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corey Schroeder - Software Developer</title>
@@ -9,27 +9,51 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            padding-top: 60px; /* Prevent content from overlapping with navbar */
             background-color: #f4f4f4;
         }
         header {
             text-align: center;
+            margin-top: 20px;
         }
         nav {
-            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
         }
         nav a:hover {
             color: #0073e6;
+        }
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -39,9 +63,89 @@
         <p>Software Developer</p>
     </header>
     <nav>
-        <a href="https://github.com/your-github-username" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">LinkedIn</a>
+        <a href="#contact">Contact</a>
         <a href="resume.pdf" target="_blank">Resume</a>
+        <a href="#podcasts">Podcasts</a>
+        <a href="#blog">Blog</a>
+        <a href="https://www.youtube.com/your-youtube-channel" target="_blank">YouTube</a>
     </nav>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>Corey Schroeder</p>
+        <p>(816) 775-9921 ● <a href="mailto:COREYSCHROEDER90@GMAIL.COM">COREYSCHROEDER90@GMAIL.COM</a> ● <a href="https://github.com/your-github-username" target="_blank">GitHub</a> ● <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">LinkedIn</a></p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <p>C# | Asp.Net 8 | .Net Core | Web App | APIs | Xunit | TDD | MySQL | Dapper | LINQ | HTML | CSS | JavaScript | Bootstrap | Git | GitHub | Visual Studio | Visual Studio Code</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Software engineer specializing in C# and ASP.NET Core MVC applications. I have a passion for creating scalable solutions to complex problems. Strong team player in a dynamic environment looking to contribute to measurable business metrics.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Project Horizon</h3>
+        <ul>
+            <li>Designed an Employee Controller in ASP.NET MVC with full CRUD functionality to manage employee records.</li>
+            <li>Implemented search and sort features for employee attributes such as name, birthdate, pay rate, and department.</li>
+            <li>Utilized dynamic sorting via ViewBag to allow for flexible data ordering by various columns.</li>
+            <li>Integrated a custom search functionality to filter employees by multiple attributes.</li>
+            <li>Created a responsive Razor view with Bootstrap to display and manage employee data.</li>
+        </ul>
+
+        <h3>Taco Parser Application</h3>
+        <ul>
+            <li>Developed a C# app to analyze geographic data from a CSV file using custom logging (ILog).</li>
+            <li>Parsed coordinates into ITrackable objects with TacoParser and calculated distances using GeoCoordinate.</li>
+            <li>Identified the two farthest locations through iterative distance comparisons.</li>
+            <li>Displayed the names of the farthest locations on the console.</li>
+        </ul>
+
+        <h3>OpenWeatherMap API Application</h3>
+        <ul>
+            <li>Integrated OpenWeatherMap API into a C# .NET console app to display current weather conditions by city.</li>
+            <li>Utilized the options pattern to bind configuration settings, retrieving the API key from appsettings.json.</li>
+            <li>Parsed JSON responses from the API to display current weather based on user input.</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <h3>NUULY, Team Lead</h3>
+        <p><strong>October 2023 - Present</strong></p>
+        <ul>
+            <li>Managed teams of 200+ employees, optimizing labor based on fluctuating orders to ensure operational efficiency.</li>
+            <li>Automated Excel reports with advanced formulas to track labor movement and improve performance metrics.</li>
+            <li>Streamlined processes by integrating data-driven decisions, boosting workflow in a high-demand environment.</li>
+        </ul>
+
+        <h3>ReeceNichols Shewmaker, Administrative Assistant</h3>
+        <p><strong>November 2022 - October 2023</strong></p>
+        <ul>
+            <li>Maintained a secure database, facilitated documentation in CMS, and ensured clear communication with clients and colleagues for efficient workflow.</li>
+        </ul>
+
+        <h3>Silverline Trailers, Commissioned Sales Associate</h3>
+        <p><strong>July 2021 - November 2022</strong></p>
+        <ul>
+            <li>Managed national sales and inventory for 30+ locations, ensuring customer satisfaction.</li>
+        </ul>
+
+        <h3>Schreiber Foods, Production Worker</h3>
+        <p><strong>February 2018 - May 2021</strong></p>
+        <ul>
+            <li>Produced food-safe products by assembling ingredients for the cheese production line in a team environment.</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>True Coders: Advanced Technical Training - Software Engineering</strong> <br>August 2023 - Present</p>
+        <p><strong>Missouri State University</strong></p>
+    </section>
 </body>
 </html>
