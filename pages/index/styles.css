@@ -1,0 +1,200 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #56623E; /* Earthy dark green background */
+    color: #f4f4f9; /* Light text color for readability */
+}
+
+/* Ensure header sections are clearly separated */
+header {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #7A8255; /* Olive green for the navbar */
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 5px solid #3A4F27; /* Darker green border to separate from hero section */
+}
+
+/* Navbar list styling */
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #f4f4f9; /* Light text color */
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #B7A97E; /* Light brownish green on hover */
+}
+
+/* Hero section with texture */
+.hero-solid-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #7A8255, rgba(176, 143, 106, 0.7), #56623E), url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Olive green to softer brown to dark green with texture */
+    background-repeat: repeat; /* Ensures the texture repeats across the entire hero section */
+    color: #ffffff; /* Pure white text for contrast */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Stronger shadow for contrast */
+    height: 30vh;
+    padding: 20px;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid rgba(176, 143, 106, 0.7); /* Softer brown border */
+    text-align: center;
+}
+
+.hero-solid-color h1 {
+    font-size: 3.5rem; /* Larger font size for better contrast */
+    font-weight: bold; /* Bold text for more prominence */
+    margin-bottom: 0.5rem;
+}
+
+.hero-solid-color p {
+    font-size: 1.8rem; /* Larger font size for subtext */
+    font-weight: 400; /* Increased weight for more legibility */
+}
+
+/* Main body section */
+main {
+    background-color: #7A8255; /* Olive green for the main content */
+}
+
+.main-wrapper {
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #B7A97E; /* Light brownish green for readability */
+    border: 2px solid rgba(176, 143, 106, 0.7); /* Softer brown border */
+    border-radius: 8px;
+    min-height: 50vh;
+    color: #56623E; /* Dark green text for contrast */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #5B4B34; /* Dark brown for the footer */
+    color: #f4f4f9;
+    border-top: 3px solid rgba(176, 143, 106, 0.7); /* Softer brown for the footer border */
+}
+
+/* ======================= Media Queries ======================= */
+
+/* Media query for small devices (max-width: 480px) - Mobile */
+@media (max-width: 480px) {
+    .hero-solid-color h1 {
+        font-size: 2rem; /* Smaller font size for the hero title */
+    }
+    
+    .hero-solid-color p {
+        font-size: 1.2rem; /* Smaller subtext font */
+    }
+
+    .main-wrapper {
+        width: 95vw; /* Use more space on small screens */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    nav .navbar {
+        flex-direction: column; /* Stack the navbar items vertically */
+    }
+
+    nav .navbar li {
+        padding: 10px 0; /* Space out the links */
+    }
+}
+
+/* Media query for medium devices (max-width: 768px) - Tablet portrait */
+@media (max-width: 768px) {
+    .hero-solid-color h1 {
+        font-size: 2.5rem; /* Adjust hero font size for tablets */
+    }
+    
+    .hero-solid-color p {
+        font-size: 1.5rem; /* Adjust subtext size for tablets */
+    }
+
+    .main-wrapper {
+        width: 90vw; /* Make use of more horizontal space */
+    }
+
+    nav .navbar {
+        justify-content: space-between; /* Adjust navbar items spacing */
+    }
+}
+
+/* Media query for large devices (max-width: 1024px) - Tablet landscape */
+@media (max-width: 1024px) {
+    .hero-solid-color h1 {
+        font-size: 3rem; /* Slightly larger title on larger tablets */
+    }
+
+    .hero-solid-color p {
+        font-size: 1.6rem; /* Increase subtext size */
+    }
+
+    .main-wrapper {
+        width: 85vw; /* Use more space for larger screens */
+    }
+
+    nav .navbar {
+        justify-content: space-evenly; /* Distribute navbar links evenly */
+    }
+}
+
+/* Media query for small desktop (max-width: 1280px) */
+@media (max-width: 1280px) {
+    .hero-solid-color h1 {
+        font-size: 3.2rem; /* Adjust hero title for smaller desktops */
+    }
+
+    .hero-solid-color p {
+        font-size: 1.7rem; /* Adjust subtext size */
+    }
+
+    .main-wrapper {
+        width: 80vw; /* Standard width for desktop screens */
+    }
+}
+
+/* Media query for large desktop (min-width: 1281px) */
+@media (min-width: 1281px) {
+    .hero-solid-color h1 {
+        font-size: 3.5rem; /* Larger font size for large desktop */
+    }
+
+    .hero-solid-color p {
+        font-size: 1.8rem; /* Larger subtext font */
+    }
+
+    .main-wrapper {
+        width: 75vw; /* Slightly reduced width for large desktops */
+    }
+}
