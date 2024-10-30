@@ -1,0 +1,289 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f4f4f9; /* Light text color for readability */
+}
+
+/* Ensure header sections are clearly separated */
+header {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+/* Navbar styles */
+nav {
+    background-color: #1e1e1e; /* Dark gray for the navbar */
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 5px solid #333333; /* Slightly darker border to separate from hero */
+}
+
+/* Navbar list styling */
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #f4f4f9; /* Light text color */
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #444444; /* Slightly lighter gray on hover */
+}
+
+/* Resume Button Styling */
+.resume-btn {
+    background-color: #efbe1ce2; /* Gold background color for attention */
+    color: #000000 !important; /* White text for contrast */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Larger font size */
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for the Resume Button */
+.resume-btn:hover {
+    background-color: #B8860B; /* Darker gold on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+
+/* Hero section with multiple light bulbs effect */
+.hero-solid-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 30vh;
+    padding: 20px;
+    margin-bottom: 1rem;
+    overflow: hidden; /* Ensures light bulbs don't overflow */
+    background-color: #1a1a1a; /* Dark background to contrast with the light bulbs */
+}
+
+.hero-solid-color::before, 
+.hero-solid-color::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    height: 100%;
+    background-image: url('/mnt/data/lamp-3726722.jpg'); /* Light bulb image */
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-50%);
+    opacity: 0.3; /* Lower opacity for layering effect */
+    z-index: 1;
+}
+
+.hero-solid-color::after {
+    transform: translate(-30%, 20%) scale(1.1); /* Offset for a slightly different position */
+    opacity: 0.5; /* Slightly more opaque */
+    z-index: 2;
+}
+
+.hero-solid-color img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 3; /* Foreground light bulb */
+    opacity: 0.7; /* Main light bulb */
+}
+
+.hero-solid-color h1, 
+.hero-solid-color p {
+    position: relative;
+    z-index: 4; /* Ensure text is above all light bulbs */
+    color: #f0e68c; /* Warm yellowish color to match the light bulb */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9); /* Strong shadow for better contrast */
+}
+
+.hero-solid-color h1 {
+    font-size: 4rem; /* Larger font size for better contrast */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero-solid-color p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Main body section */
+main {
+    background-color: #1e1e1e; /* Dark gray for main content */
+}
+
+.main-wrapper {
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #2a2a2a; /* Lighter dark background for contrast */
+    border: 2px solid #333333; /* Subtle border to define content */
+    border-radius: 8px;
+    min-height: 50vh;
+    color: #e0e0e0; /* Light gray text for readability */
+}
+
+
+
+.pdf-container {
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    max-width: 100%; /* Prevent overflow */
+    max-height: 100%; /* Prevent overflow */
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+embed {
+    width: 80vw; /* Adjust size for better visibility */
+    height: auto;
+    border: none;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e; /* Dark gray for footer */
+    color: #f4f4f9;
+    border-top: 3px solid #333333;
+}
+
+/* ======================= Media Queries ======================= */
+
+/* Media query for small devices (max-width: 480px) - Mobile */
+@media (max-width: 480px) {
+    .hero-solid-color h1 {
+        font-size: 2.5rem; /* Smaller font size for the hero title */
+    }
+    
+    .hero-solid-color p {
+        font-size: 1.2rem; /* Smaller subtext font */
+    }
+
+    .main-wrapper {
+        width: 95vw;
+        padding: 1rem;
+    }
+
+    .hero-solid-color img {
+        width: 200px; /* Smaller light bulb for mobile */
+    }
+}
+
+/* Media query for medium devices (max-width: 768px) - Tablet portrait */
+@media (max-width: 768px) {
+    .hero-solid-color h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-solid-color p {
+        font-size: 1.5rem;
+    }
+
+    .main-wrapper {
+        width: 90vw;
+    }
+
+    .hero-solid-color img {
+        width: 250px;
+    }
+}
+
+/* Media query for large devices (max-width: 1024px) - Tablet landscape */
+@media (max-width: 1024px) {
+    .hero-solid-color h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-solid-color p {
+        font-size: 1.6rem;
+    }
+
+    .main-wrapper {
+        width: 85vw;
+    }
+
+    .hero-solid-color img {
+        width: 270px;
+    }
+}
+
+/* Media query for small desktop (max-width: 1280px) */
+@media (max-width: 1280px) {
+    .hero-solid-color h1 {
+        font-size: 3.7rem;
+    }
+
+    .hero-solid-color p {
+        font-size: 1.7rem;
+    }
+
+    .main-wrapper {
+        width: 80vw;
+    }
+
+    .hero-solid-color img {
+        width: 300px;
+    }
+}
+
+/* Media query for large desktop (min-width: 1281px) */
+@media (min-width: 1281px) {
+    .hero-solid-color h1 {
+        font-size: 4rem;
+    }
+
+    .hero-solid-color p {
+        font-size: 1.8rem;
+    }
+
+    .main-wrapper {
+        width: 75vw;
+    }
+
+    .hero-solid-color img {
+        width: 350px;
+    }
+}
+@media (max-width: 600px) {
+    .pdf-container {
+        width: 90vw; /* Adjust size for smaller screens */
+        height: 90vh; /* Adjust size for smaller screens */
+    }
+}

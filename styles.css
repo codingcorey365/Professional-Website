@@ -50,6 +50,27 @@ nav {
     background-color: #B7A97E; /* Light brownish green on hover */
 }
 
+/* Resume Button Styling */
+.resume-btn {
+    background-color: #70e51698; /* Gold background color for attention */
+    color: black !important; /* White text for contrast */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Larger font size */
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for the Resume Button */
+.resume-btn:hover {
+    background-color: #B8860B; /* Darker gold on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+
 /* Hero section with texture */
 .hero-solid-color {
     display: flex;
